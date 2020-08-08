@@ -1,4 +1,75 @@
 body {
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   margin: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  height: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#container1 {
+  display: flex;
+
+  height: 100%;
+}
+
+#s1 {
+  flex-basis: 240px;
+}
+
+#s2 {
+  /* flex: grow shrink basis */
+  flex: 1;
+  background-color: #eee;
+}
+
+#s3 {
+  flex-basis: 180px;
+  flex-grow: none;
+  flex-shrink: 0;
+}
+
+.c1 {
+  padding: 1em;
+}
+
+#container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 0 0 250px;
+  background-color: white;
+  margin: .5rem;
+
+  border-radius: 10px;
+  /*box-shadow: (optional)inset offset-x offset-y (optional)blur-radius (optional)spread-radius color, shadow#2 if wanted*/
+  /*decimals must lead with 0. ?*/
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.16), 0 1px 3px rgba(0, 0, 0, 0.23);
+
+}
+
+.card_description {
+  /* padding: top right bottom left ...guess it duplicates top to bottom and left to right?*/
+  padding: .5rem 1rem;
+}
+
+.card_image {
+  /* border-radius: topleft topright bottomright bottomleft */
+  border-radius: .5rem .5rem 0 0;
+}
+
+main {
+  flex: 1;
+}
+
+html {
+  height: 100%;
 }
